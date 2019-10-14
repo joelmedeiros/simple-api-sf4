@@ -9,7 +9,7 @@ docker-compose up -d
 docker-compose exec php composer install
 ```
 
-###Running the tests
+### Running the tests
 
 All tests were wrote using [codeception](https://codeception.com) library, then we need to use its commands to run all tests:
 
