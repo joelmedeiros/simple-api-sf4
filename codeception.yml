@@ -1,0 +1,21 @@
+namespace: App\Tests
+paths:
+    tests: tests/
+    output: tests/_output
+    data: tests/_data
+    support: tests/_support
+    envs: tests/_envs
+actor_suffix: Tester
+extensions:
+    enabled:
+        - Codeception\Extension\RunFailed
+modules:
+    config:
+        MongoDb:
+            dsn: 'mongodb://db:27017/blog'
+            user: null
+            password: null
+            dump_type: 'mongodump'
+            cleanup: false
+params:
+    - .env

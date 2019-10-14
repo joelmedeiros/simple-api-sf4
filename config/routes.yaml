@@ -1,0 +1,3 @@
+controllers:
+  prefix: /v1/
+  resource: routes/annotations.yaml

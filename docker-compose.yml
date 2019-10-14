@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+  nginx:
+    build: docker/nginx
+    depends_on:
+      - php
+    ports:
+      - '80:80'
+    volumes:
+      - .:/var/www/html
+  php:
+    build: docker/web
+    depends_on:
+      - db
+    volumes:
+      - .:/var/www/html:cached
+  db:
+    image: mvertes/alpine-mongo
+    volumes:
+      - db:/data/db
+    ports:
+      - "27017:27017"
+
+volumes:
+  db:
+    driver: local
