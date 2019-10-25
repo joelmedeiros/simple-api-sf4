@@ -11,13 +11,13 @@ docker-compose exec php composer install
 
 ### Running the tests
 
-All tests were wrote using [codeception](https://codeception.com) library, then we need to use its commands to run all tests:
+All tests were written using [codeception](https://codeception.com) library, then we need to use its commands to run all tests:
 
 ```bash
 docker-compose exec php vendor/bin/codecept run
 ```
 
-For this task, I did not wrote Unit tests, because In my concern, It was not needed.
+For this task, I did not write Unit tests, because In my concern, It was not needed.
 
 After run the tests, some data will be generated to be used by our API. 
 
